@@ -1,0 +1,38 @@
+#waybar { background: rgba(0, 0, 0, 0.5); }
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(26, 26, 26, 0.9); /* Dark background with slight transparency */
+    color: #ffffff;
+    border-bottom: 2px solid #e63946; /* Red "Hotbar" underline */
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #ffffff;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    background: #e63946;
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#clock {
+    background-color: #e63946; /* Red block for the clock */
+    color: #ffffff;
+    font-weight: bold;
+}
