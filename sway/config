@@ -45,10 +45,10 @@ output * bg /home/drewie/Pictures/wallpaper/home.png fill
 #
 ### Idle configuration
 exec_always killall swayidle; swayidle -w \
-    timeout 9000 'swaylock -f -i /home/drewie/Pictures/wallpaper/idle.png' \
-    timeout 10000 'swaymsg "output * power off"' \
+    timeout 4500 'swaylock -f -i /home/drewie/Pictures/wallpaper/idle.png' \
+    timeout 4700 'swaymsg "output * power off"' \
     resume 'swaymsg "output * power on"'
-# ^ NO BACKSLASH ON THIS LAST LINE ^# This will lock your screen after 300 seconds of inactivity, then turn off
+# ^ NO BACKSLASH ON THIS LAST LINE ^# This will lock your screen after 4500 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
@@ -270,4 +270,8 @@ for_window [class="Spotify"] move scratchpad
 # Replace $mod with your meta key (usually Super/Windows)
 bindsym $mod+s [class="Spotify"] scratchpad show
 #for waybar
-exec_always pkill waybar; waybar
+ exec_always pkill waybar; waybar
+#for anti-microx
+ exec ~/.local/bin/controller-watchdog.sh
+
+ exec ~/.config/ps4/ds4_battery_led.py

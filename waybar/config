@@ -16,7 +16,8 @@
     ],
     "modules-center": [
         "tray",
-        "battery", 
+        "battery",
+        "custom/gamepad",
         "sway/window",
         "sway/workspaces",
         "clock"
@@ -200,6 +201,17 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
+  "custom/gamepad": {
+    "exec": "dev=$(upower -e | grep 30_F1_89_BE_16_A3); [ -n \"$dev\" ] && upower -i $dev | awk '/percentage/ {print $2}'",
+    "interval": 10,
+    "format": "🎮 {}",
+    "tooltip": false
+},
+"custom/ds4_bat": {
+    "exec": "cat /sys/class/power_supply/sony_controller_battery_*/capacity 2>/dev/null | awk '{print \"🎮 \" $1 \"%\"}'",
+    "interval": 10,
+    "format": "{}"
+},
     "custom/power": {
         "format" : " ⏻ ",
 		"tooltip": false,
@@ -207,7 +219,7 @@
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
       "logout": "swaymsg exit",
-      "shutdown": "shutdown",
+      "shutdown": "shutdown -P now",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"

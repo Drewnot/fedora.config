@@ -1,38 +1,14 @@
-abrt/
-balena-etcher/
-BraveSoftware/
-Code/
-dconf/
+# Ignore everything by default
+*
 
-GIMP/
-libreoffice/
-mimeapps.list
-pavucontrol.ini
-QtProject.conf
+# But allow the specific config folders you actually want to share
+!sway/
+!waybar/
+!foot/
+!rofi/
+!swaync/
+!nvim/
+!grub-themes/
 
-Thunar/
-vdirsyncer/
-xfce4/
-composer/
-dosbox/
-GNS3/
-
-lxqt/
-mpv/
-pulse/
-rofi/
-sway.config
-user-dirs.dirs
-
-BraveSoftware/
-customver1/
-evolution/
-
-gtk-3.0/
-menus/
-
-qBittorrent/
-sealert.conf
-
-user-dirs.locale
-xarchiver/
+# You can also allow specific files
+!.gitignore
