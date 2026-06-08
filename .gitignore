@@ -9,6 +9,7 @@
 !swaync/
 !nvim/
 !grub-themes/
+!commands/
 
 # You can also allow specific files
 !.gitignore
