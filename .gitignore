@@ -10,6 +10,9 @@
 !nvim/
 !grub-themes/
 !commands/
+!antimicrox/
 
 # You can also allow specific files
 !.gitignore
+
+
