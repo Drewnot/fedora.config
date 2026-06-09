@@ -1,0 +1,1 @@
+xargs flatpak install -y flathub < flatpaks.txt

@@ -1,0 +1,11 @@
+com.github.tchx84.Flatseal
+com.gluonhq.SceneBuilder
+com.jetbrains.IntelliJ-IDEA-Community
+com.rtosta.zapzap
+com.spotify.Client
+de.haeckerfelix.Shortwave
+io.dbeaver.DBeaverCommunity
+net.pcsx2.PCSX2
+net.rpcs3.RPCS3
+org.ppsspp.PPSSPP
+org.videolan.VLC

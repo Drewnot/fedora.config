@@ -1,18 +1,33 @@
 # Ignore everything by default
 *
 
-# But allow the specific config folders you actually want to share
+# Allow the specific config folders
 !sway/
+!sway/**
+
 !waybar/
+!waybar/**
+
 !foot/
+!foot/**
+
 !rofi/
+!rofi/**
+
 !swaync/
+!swaync/**
+
 !nvim/
+!nvim/**
+
 !grub-themes/
+!grub-themes/**
+
 !commands/
+!commands/**
+
 !antimicrox/
+!antimicrox/**
 
-# You can also allow specific files
+# Allow specific files
 !.gitignore
-
-
